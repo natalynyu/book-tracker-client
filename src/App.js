@@ -21,9 +21,22 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Book Tracker</h1>
-        <ul style={{textAlign: "left"}}>{this.state.data.books.map(book => {
-          return <li key={book.title}>{book.title}</li>
-        })}</ul>
+        <table>
+          <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Date Completed</th>
+          </tr>
+          {this.state.data.books.map(book => {
+          return <div>
+          <tr>
+          <td key={book.title}>{book.title}</td>
+          <td key={book.author}>{book.author}</td>
+          <td key={book.completionDate}>{book.completionDate}</td>
+          </tr>
+          </div>
+          })}
+        </table>
       </div>
     )
   }
