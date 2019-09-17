@@ -28,15 +28,13 @@ class App extends React.Component {
             <th>Date Completed</th>
           </tr>
           {this.state.data.books.map(book => {
-          return <span>
-          <tr>
+          return <tr>
             <td key={book.title}>{book.title}</td>
             <td key={book.author}>{book.author}</td>
             <td key={book.completionDate}>{book.completionDate}</td>
-            <button>Edit</button>
-            <button>Delete</button>
+            <td><button>Edit</button></td>
+            <td><button>Delete</button></td>
           </tr>
-          </span>
           })}
         </table>
       </div>
