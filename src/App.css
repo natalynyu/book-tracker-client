@@ -27,3 +27,8 @@
     transform: rotate(360deg);
   }
 }
+
+table, td, th {
+  border-collapse: collapse;
+  text-align: center;
+}

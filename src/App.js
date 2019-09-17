@@ -23,18 +23,20 @@ class App extends React.Component {
         <h1>Book Tracker</h1>
         <table>
           <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Date Completed</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Date Completed</th>
           </tr>
           {this.state.data.books.map(book => {
-          return <div>
+          return <span>
           <tr>
-          <td key={book.title}>{book.title}</td>
-          <td key={book.author}>{book.author}</td>
-          <td key={book.completionDate}>{book.completionDate}</td>
+            <td key={book.title}>{book.title}</td>
+            <td key={book.author}>{book.author}</td>
+            <td key={book.completionDate}>{book.completionDate}</td>
+            <button>Edit</button>
+            <button>Delete</button>
           </tr>
-          </div>
+          </span>
           })}
         </table>
       </div>
